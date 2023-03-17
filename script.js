@@ -30,6 +30,5 @@ generateBtn.addEventListener("click", () => {
   const numWords = parseInt(numWordsSelect.value);
   const separator = separatorSelect.value;
   const passphrase = generatePassphrase(numWords, separator);
-  alert("Hello");
   output.textContent = passphrase;
 });
