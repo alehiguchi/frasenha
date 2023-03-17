@@ -9,7 +9,9 @@
 <body>
     <div class="container">
         <h1>Gerador de Frasenha</h1>
-        <p id="output" onclick="copyToClipboard()"></p>
+        <div id="outputContainer" onclick="copyToClipboard()">
+            <p id="output"></p>
+        </div>
         <label for="numWords">Número de Palavras:</label>
         <select id="numWords">
             <option value="2">2</option>
