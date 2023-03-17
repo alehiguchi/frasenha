@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Frasenha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Frasenha</h1>
+        <div id="outputContainer" onclick="copyToClipboard()">
+            <p id="output"></p>
+        </div>
+        <label for="numWords">Número de Palavras:</label>
+        <select id="numWords">
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        <label for="separator">Separador:</label>
+        <select id="separator">
+            <option value=".">.</option>
+            <option value="-">-</option>
+            <option value="#">#</option>
+            <option value="$">$</option>
+            <option value=" ">Space</option>
+        </select>
+        <br>
+        <label for="capitalize">Maiúscula:</label>
+        <input type="checkbox" id="capitalize" checked>
+        <br>
+        <label for="includeNumbers">Incluir Número:</label>
+        <input type="checkbox" id="includeNumbers" checked>
+        <br>
+        <button id="generateBtn">Gerar Frasenha</button>
+    </div>
+    <script src="pagoscript.js"></script>
+</body>
+</html>
