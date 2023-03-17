@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Passphrase Generator</h1>
+        <p id="output" onclick="copyToClipboard()"></p>
         <label for="numWords">Number of words:</label>
         <select id="numWords">
             <option value="2">2</option>
@@ -30,8 +31,8 @@
         <input type="checkbox" id="includeNumbers" checked>
         <br>
         <button id="generateBtn">Generate Passphrase</button>
-        <p id="output" onclick="copyToClipboard()"></p>
     </div>
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
