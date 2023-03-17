@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passphrase Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Passphrase Generator</h1>
+        <label for="numWords">Number of words:</label>
+        <select id="numWords">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        <label for="separator">Separator:</label>
+        <select id="separator">
+            <option value=".">.</option>
+            <option value="-">-</option>
+            <option value=" ">Space</option>
+        </select>
+        <br>
+        <label for="capitalize">Include capitalization:</label>
+        <input type="checkbox" id="capitalize" checked>
+        <br>
+        <label for="includeNumbers">Include numbers:</label>
+        <input type="checkbox" id="includeNumbers" checked>
+        <br>
+        <button id="generateBtn">Generate Passphrase</button>
+        <p id="output" onclick="copyToClipboard()"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
