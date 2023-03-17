@@ -1,8 +1,18 @@
-const words = ["cat", "dog", "mouse", "table", "house"];
+let words = [];
 const numWordsSelect = document.getElementById("numWords");
 const separatorSelect = document.getElementById("separator");
 const generateBtn = document.getElementById("generateBtn");
 const output = document.getElementById("output");
+
+async function loadWords() {
+  try {
+    const response = await fetch("wordlist.txt");
+    const text = await response.text();
+    words = text.trim().split(/\s+/);
+  } catch (error) {
+    console.error("Error loading wordlist.txt:", error);
+  }
+}
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
@@ -19,16 +29,11 @@ function generatePassphrase(numWords, separator) {
   return passphrase;
 }
 
-function showPassphrase () {
-  const numWords = parseInt(numWordsSelect.value);
-  const separator = separatorSelect.value;
-  const passphrase = generatePassphrase(numWords, separator);
-  alert("Hello");
-  output.textContent = passphrase;
-}
 generateBtn.addEventListener("click", () => {
   const numWords = parseInt(numWordsSelect.value);
   const separator = separatorSelect.value;
   const passphrase = generatePassphrase(numWords, separator);
   output.textContent = passphrase;
 });
+
+loadWords();
