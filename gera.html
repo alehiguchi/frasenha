@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de Frases Secretas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Gerador de Frases Secretas</h1>
-        <div class="form-group">
+        <h1>Gerador de Senhas</h1>
+        <div class="input-group">
             <label for="numWords">Número de palavras:</label>
             <select id="numWords">
                 <option value="2">2</option>
@@ -18,7 +17,7 @@
                 <option value="4">4</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="input-group">
             <label for="separator">Separador:</label>
             <select id="separator">
                 <option value=".">.</option>
@@ -26,7 +25,7 @@
                 <option value=" ">Espaço</option>
             </select>
         </div>
-        <button id="generateBtn">Gerar Frase Secreta</button>
+        <button id="generateBtn">Gerar Senha</button>
         <p id="output"></p>
     </div>
     <script src="script.js"></script>
